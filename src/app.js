@@ -14,6 +14,8 @@ import * as secretApp from './app-secrets.js';
 
 const app = express();
 
+app.set('trust proxy', true);
+
 process.on('unhandledRejection', (reason) => {
   console.log('Rejection:', reason);
 });
